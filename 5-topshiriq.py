@@ -152,3 +152,27 @@ while True:
     form.ask_phone_number()
 
     form.show_user_info()
+
+
+    class EmailForm:
+        def __init__(self):
+            self.email = ""
+
+        def ask_email(self):
+            while True:
+                self.email = input("Elektron pochta manzilingizni kiriting: ")
+                if "@" in self.email and "." in self.email:
+                    print("Elektron pochta manzili muvaffaqiyatli qabul qilindi.")
+                    break
+                else:
+                    print("Iltimos, to'g'ri elektron pochta manzilini kiriting.")
+
+        def show_email(self):
+            print(f"Elektron pochta: {self.email}")
+
+
+    form = EmailForm()
+
+    form.ask_email()
+
+    form.show_email()
