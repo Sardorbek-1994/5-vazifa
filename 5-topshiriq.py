@@ -176,3 +176,25 @@ while True:
     form.ask_email()
 
     form.show_email()
+
+
+    class AddressForm:
+        def __init__(self):
+            self.address = ""
+
+        def ask_address(self):
+            self.address = input("Iltimos, manzilingizni kiriting: ")
+
+        def show_address(self):
+            print(f"Sizning manzilingiz: {self.address}")
+
+
+    form = AddressForm()
+
+    form.ask_address()
+
+    form.show_address()
+
+
+
+
