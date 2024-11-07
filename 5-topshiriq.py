@@ -198,3 +198,20 @@ while True:
 
 
 
+    def collect_user_info(self):
+        user_info = f"Ism: {self.first_name}\n"
+        user_info += f"Familiya: {self.last_name}\n"
+        user_info += f"Yosh: {self.age}\n"
+        user_info += f"Elektron pochta: {self.email}\n"
+        return user_info
+
+
+form = UserForm()
+form.ask_first_name()
+form.ask_last_name()
+form.ask_age()
+form.ask_email()
+
+user_info = form.collect_user_info()
+save_to_file(user_info)
+print("\nFoydalanuvchi ma'lumotlari saqlandi.")
